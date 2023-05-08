@@ -22,3 +22,7 @@ The concepts used in this case study includes,
 
 The queries are also attached.
 Additionally, I have also created some charts and dashboards using Metabase to have a better look at the insights.
+
+Here is the link to the dashboard
+http://localhost:3000/public/dashboard/08029ac3-ac94-4ee1-8e69-33d87fdc3741
+
