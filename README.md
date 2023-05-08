@@ -1,6 +1,8 @@
 # Danys_Diner_8WeekSQLChallenge-1
 This is my solution for the 1st Case Study in Danny Ma's 8 Week SQL Challenge - Dany's Diner case study.
 
+Link for the Cae study - https://8weeksqlchallenge.com/case-study-1/
+
 In this project, I have solved the above mentioned case study using SQL. I have used Postgres for creating and executing teh queries.
 The concepts used in this case study includes,
 1.Creating a database
