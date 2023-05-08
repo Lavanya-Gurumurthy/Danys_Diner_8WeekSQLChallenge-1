@@ -54,8 +54,21 @@ from sales s inner join menu m on s.product_id=m.product_id) AS sub
 WHERE r1=1;
 
 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
-Overall most purchased product - select product_id, count(product_id) as cnt from sales group by product_id;
-No of times purchased by customers - select customer_id, product_id, count(product_id) as cnt from sales group by customer_id, product_id order by cnt desc;
+Overall most purchased product 
+ select m.product_name, count(s.product_id) as cnt from sales s inner join menu m on 
+ m.product_id=s.product_id 
+ group by m.product_name;
+ 
+No of times all the items were purchased by customers 
+select s.customer_id, m.product_name, count(s.product_id) as cnt from sales s 
+ inner join menu m on m.product_id=s.product_id
+ group by s.customer_id, m.product_name order by s.customer_id, cnt desc;
+ 
+ Number of times Ramen alone was purchased by each customer:
+  select s.customer_id, m.product_name, count(s.product_id) as cnt from sales s 
+ inner join menu m on m.product_id=s.product_id
+ WHERE m.product_name='ramen'
+ group by s.customer_id, m.product_name order by s.customer_id, cnt desc;
 
 5. Which item was the most popular for each customer?
 select sales.customer_id,sales.product_id,menu.product_name, count(sales.product_id) as cnt from sales inner join menu on sales.product_id=menu.product_id group by sales.customer_id, sales.product_id,menu.product_name order by customer_id, cnt desc;
